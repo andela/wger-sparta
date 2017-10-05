@@ -25,12 +25,15 @@ import argparse
 
 from django.db import IntegrityError
 from django.utils.text import slugify
+
+sys.path.insert(0, os.path.join('..', '..'))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+django.setup()
+
+# Must happen after calling django.setup()
 from django.contrib.auth.models import User
 from wger.core.models import DaysOfWeek
-from wger.weight.models import WeightEntry
-from wger.core.models import Language
 from wger.exercises.models import Exercise
-# Must happen after calling django.setup()
 from wger.gym.models import (
     GymUserConfig,
     Gym
@@ -45,6 +48,9 @@ from wger.manager.models import (
     WorkoutLog,
     WorkoutSession
 )
+from wger.weight.models import WeightEntry
+
+from wger.core.models import Language
 
 # Nutrition import //_c
 from wger.nutrition.models import (
@@ -55,11 +61,6 @@ from wger.nutrition.models import (
     Meal,
     MealItem
 )
-
-sys.path.insert(0, os.path.join('..', '..'))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
-django.setup()
-
 
 parser = argparse.ArgumentParser(description='Data generator. Please consult the documentation')
 subparsers = parser.add_subparsers(help='The kind of entries you want to generate')
@@ -473,8 +474,7 @@ if hasattr(args, 'number_nutrition_plans'):
                 meal.save()
                 for k in range(0, random.randint(1, 5)):
                     ingredient = random.choice(ingredientList)
-                    meal_item = MealItem(meal=meal, ingredient=ingredient,
-                                         weight_unit=None, order=order,
-                                         amount=random.randint(10, 250))
+                    meal_item = MealItem(meal=meal, ingredient=ingredient, weight_unit=None,
+                                         order=order, amount=random.randint(10, 250))
                     meal_item.save()
                 order = order + 1
