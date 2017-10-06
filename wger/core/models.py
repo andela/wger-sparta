@@ -25,6 +25,10 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
+
+from rest_framework.authtoken.models import Token
+
+
 from wger.gym.models import Gym
 
 from wger.utils.constants import TWOPLACES
@@ -323,6 +327,13 @@ by the US Department of Agriculture. It is extremely complete, with around
                                                                MaxValueValidator(30)],
                                                    default=0)
     '''Number of Days for email weight reminder'''
+
+    added_by = models.ForeignKey(Token,
+                                 verbose_name=_('Added by external via rest api'),
+                                 help_text=_('These are the users that have been added via'
+                                             'the rest api'),
+                                 null=True, blank=True)
+    '''Users added via rest api'''
 
     @property
     def weight(self):
