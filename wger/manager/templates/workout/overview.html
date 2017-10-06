@@ -30,7 +30,10 @@
 
 
 {% block options %}
-<a href="{% url 'manager:workout:add' %}" class="btn btn-success btn-sm">
+<a href="{% url 'manager:workout:add' %}" class="btn btn-success btn-sm" style="border-radius: 2px;">
     {% trans "Add workout" %}
+</a>
+<a href="{% url 'manager:workout:export' %}" class="btn btn-primary btn-sm" style="margin-left: 10px; border-radius: 2px;">
+    {% trans "Export workouts" %}
 </a>
 {% endblock %}
