@@ -23,6 +23,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 from django.template.context_processors import csrf
 from django.core.urlresolvers import reverse, reverse_lazy
+from django.core import serializers
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -69,6 +70,9 @@ def overview(request):
     (current_workout, schedule) = Schedule.objects.get_current_workout(request.user)
     template_data['workouts'] = workouts
     template_data['current_workout'] = current_workout
+    # workout = workouts[0].canonical_representation
+    # workout_json = serializers.serialize('json', workout)
+    # print(workout_json)
 
     return render(request, 'workout/overview.html', template_data)
 
