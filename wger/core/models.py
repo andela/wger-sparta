@@ -41,7 +41,7 @@ class Author(models.Model):
     '''
     name = models.CharField(max_length=240,
                             verbose_name=_('Name'))
-    
+
     def __str__(self):
         return self.name
 
