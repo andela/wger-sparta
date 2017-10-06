@@ -26,16 +26,18 @@ jobs:
           - v1-dependencies-{{ checksum "requirements.txt" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-          
+
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt && pip install -r requirements_devel.txt
+
             ROOT=$(pwd)
             invoke create-settings  --settings-path $ROOT/settings.py --database-path $ROOT/database.sqlite
             #invoke bootstrap-wger --settings-path $ROOT/settings.py --no-start-server
+
       - save_cache:
           paths:
             - ./venv
@@ -47,6 +49,7 @@ jobs:
           command: |
             . venv/bin/activate
             python manage.py test
+
       - store_artifacts:
           path: test-reports
           destination: test-reports
