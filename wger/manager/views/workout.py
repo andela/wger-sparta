@@ -17,11 +17,13 @@
 import logging
 import uuid
 import datetime
+import json
 
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 from django.template.context_processors import csrf
 from django.core.urlresolvers import reverse, reverse_lazy
+from django.core import serializers
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -68,6 +70,9 @@ def overview(request):
     (current_workout, schedule) = Schedule.objects.get_current_workout(request.user)
     template_data['workouts'] = workouts
     template_data['current_workout'] = current_workout
+    # workout = workouts[0].canonical_representation
+    # workout_json = serializers.serialize('json', workout)
+    # print(workout_json)
 
     return render(request, 'workout/overview.html', template_data)
 
@@ -214,6 +219,48 @@ def add(request):
 
     return HttpResponseRedirect(workout.get_absolute_url())
 
+@login_required
+def export(request, pk=None):
+    '''
+    Exports workout(s) as json
+    '''
+    if pk:
+        workouts = [get_object_or_404(Workout, pk=pk)]
+    else:
+        workouts = Workout.objects.filter(user=request.user)
+    data = []
+    for workout in workouts:
+        workout_json = {
+            "creation_date": workout.creation_date.strftime('%d/%m/%Y'),
+            "comment": workout.comment,
+        }
+        if workout.canonical_representation['day_list']:
+            workout_json["description"] = workout.canonical_representation['day_list'][0]['obj'].description,
+            workout_json["days_of_week"] = workout.canonical_representation['day_list'][0]['days_of_week']['text'],
+            exercises = []
+            for set_obj in workout.canonical_representation['day_list'][0]['set_list']:
+                exercise = {
+                    'name': set_obj['exercise_list'][0]['obj'].name,
+                    'category': set_obj['exercise_list'][0]['obj'].category.name,
+                    'setting_list': set_obj['exercise_list'][0]['setting_text'].replace('\u00d7','*').replace('\u2013','-'),
+                    'description': set_obj['exercise_list'][0]['obj'].description.replace('<p>','').replace('</p>',''),
+                }
+                equipment = []
+                for equip in set_obj['exercise_list'][0]['obj'].equipment.all():
+                    equipment.append(equip.name)
+                exercise['equipment'] = equipment
+                muscles = []
+                for muscle in set_obj['exercise_list'][0]['obj'].muscles.all():
+                    muscles.append(muscle.name)
+                exercise['muscles'] = muscles
+                exercises.append(exercise)
+            workout_json['exercises'] = exercises
+            data.append(workout_json)
+    workouts_json = json.dumps(data)
+    response = HttpResponse(workouts_json, content_type='application/json')
+    response['Content-Disposition'] = 'attachment; filename=workouts.json'
+
+    return response
 
 class WorkoutDeleteView(WgerDeleteMixin, LoginRequiredMixin, DeleteView):
     '''
