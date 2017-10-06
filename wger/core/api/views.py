@@ -16,9 +16,10 @@
 # along with Workout Manager.  If not, see <http://www.gnu.org/licenses/>.
 
 from django.contrib.auth.models import User
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.decorators import detail_route
+from rest_framework.authtoken.models import Token
 
 from wger.core.models import (
     UserProfile,
@@ -35,8 +36,50 @@ from wger.core.api.serializers import (
     RepetitionUnitSerializer,
     WeightUnitSerializer
 )
-from wger.core.api.serializers import UserprofileSerializer
+from wger.core.api.serializers import UserprofileSerializer, UserSerializer
 from wger.utils.permissions import UpdateOnlyPermission, WgerPermission
+
+
+class UserRegistrationView(viewsets.ModelViewSet):
+    """
+    Api endpoint for user registration using API key
+    """
+    is_private = True
+    serializer_class = UserSerializer
+    ordering_fields = ('username', 'email', 'password')
+
+    def get_queryset(self):
+        """
+        Serialize the current user object
+        :return: User
+        """
+
+        return User.objects.filter(username=self.request.user.username)
+
+    def create(self, request, *args, **kwargs):
+        """
+        Overrides the create method for the user.
+        Used to save data from the endpoint
+        :param request:
+        :param args:
+        :param kwargs: Response object
+        :return:
+        """
+        serializer = UserSerializer(data=request.data)
+
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer.save()
+        last_profile = User.objects.get(username=request.data.get('username'))
+        last_profile.set_password(request.data.get('password'))
+        last_profile.save()
+
+        profile = UserProfile.objects.get(user=last_profile)
+        profile.added_by = UserProfile.objects.get(user=request.user)
+        profile.save()
+
+        return Response({'success': 'Profile created'}, status=status.HTTP_201_CREATED)
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
