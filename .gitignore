@@ -13,7 +13,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-lib/ 
+lib/
 lib64/
 parts/
 sdist/
@@ -59,9 +59,11 @@ target/
 # IDE
 .idea/
 
-# External Libraries 
+# External Libraries
 wger/core/static/bower_components
 node_modules
-.env
 .vscode/
 package-*.json
+package-lock.json
+package.json
+
