@@ -23,7 +23,17 @@
       role="form"
       {% if enctype %}enctype="{{enctype}}"{% endif %}>
     {% render_form_fields form submit_text %}
+
+    {% if social %}
+    <div class="social">
+        <a href="{% url 'social:begin' 'facebook' %}" class="fa fa-facebook"></a>
+        <a href="{% url 'social:begin' 'twitter' %}" class="fa fa-twitter"></a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="fa fa-google"></a>
+    </div>
+    
+    {% endif %}
 </form>
+
 {% endblock %}
 
 
