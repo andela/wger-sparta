@@ -86,6 +86,8 @@ INSTALLED_APPS = (
 
     # django-bower for installing bower packages
     'djangobower',
+    # support for social login
+    'social_django',
 )
 
 # added list of external libraries to be installed by bower
@@ -130,7 +132,10 @@ MIDDLEWARE_CLASSES = (
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'wger.utils.helpers.EmailAuthBackend'
+    'wger.utils.helpers.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
 )
 
 TEMPLATES = [
@@ -140,7 +145,9 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'wger.utils.context_processor.processor',
-
+                # Social Django 
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
                 # Django
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.debug',
@@ -271,6 +278,7 @@ LOGGING = {
 #
 RECAPTCHA_USE_SSL = True
 
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 #
 # Cache
@@ -356,6 +364,18 @@ CORS_URLS_REGEX = r'^/api/.*$'
 IGNORABLE_404_URLS = (
     re.compile(r'^/favicon\.ico$'),
 )
+
+# Social Backends setup  
+
+SOCIAL_AUTH_TWITTER_KEY = os.environ.get('TWITTER_KEY')
+SOCIAL_AUTH_TWITTER_SECRET = os.environ.get('TWITTER_SECRET')
+
+SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('FACEBOOK_SECRET')
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('GOOGLE_OAUTH2_SECRET')
+
 
 #
 # Application specific configuration options
