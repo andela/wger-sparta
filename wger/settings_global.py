@@ -390,3 +390,15 @@ WGER_SETTINGS = {
     'EMAIL_FROM': 'wger Workout Manager <wger@example.com>',
     'TWITTER': False
 }
+
+
+if os.getcwd() == "/app":
+    from dj_database_url import parse
+    DATABASE_URL = os.getenv('DATABASE_URL')
+    DATABASES = {
+        "default": parse(
+            DATABASE_URL,
+            conn_max_age=600
+            )
+    }
+    
