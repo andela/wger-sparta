@@ -22,4 +22,4 @@ class GymConfig(AppConfig):
     verbose_name = "Gym"
 
     def ready(self):
-        pass
+        import wger.gym.signals

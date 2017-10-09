@@ -145,6 +145,7 @@ class RegistrationFormNoCaptcha(UserCreationForm, UserEmailForm):
     such a spam danger and simplifies the registration process on a mobile
     device.
     '''
+    pass
 
 
 class FeedbackRegisteredForm(forms.Form):

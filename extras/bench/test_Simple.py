@@ -3,6 +3,7 @@
 Simple FunkLoad test
 '''
 import unittest
+from random import random
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
 

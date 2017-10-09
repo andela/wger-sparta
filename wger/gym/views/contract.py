@@ -30,7 +30,7 @@ from django.views.generic import (
 )
 
 from wger.utils.generic_views import WgerFormMixin
-from wger.gym.models import Contract
+from wger.gym.models import Contract, Gym
 
 logger = logging.getLogger(__name__)
 
