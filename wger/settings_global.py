@@ -124,7 +124,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-
+    # Middleware to catch errors in social login 
+    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
     # Django mobile
     'django_mobile.middleware.MobileDetectionMiddleware',
     'django_mobile.middleware.SetFlavourMiddleware',
@@ -202,7 +203,7 @@ EMAIL_SUBJECT_PREFIX = '[wger] '
 LOGIN_URL = '/user/login'
 LOGIN_REDIRECT_URL = '/'
 
-
+SOCIAL_AUTH_LOGIN_ERROR_URL = LOGIN_URL
 #
 # Internationalization
 #
