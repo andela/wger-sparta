@@ -4,7 +4,7 @@
 from wger.settings_global import *
 
 # Use 'DEBUG = True' to get more details for server errors
-DEBUG = True
+DEBUG = False
 TEMPLATES[0]['OPTIONS']['debug'] = True
 
 ADMINS = (
