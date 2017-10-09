@@ -396,6 +396,7 @@ WGER_SETTINGS = {
 if os.getcwd() == "/app":
     from dj_database_url import parse
     DATABASE_URL = os.getenv('DATABASE_URL')
+    DEBUG = False
     DATABASES = {
         "default": parse(
             DATABASE_URL,
