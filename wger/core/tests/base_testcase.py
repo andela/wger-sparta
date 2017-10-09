@@ -214,7 +214,6 @@ class WorkoutManagerTestCase(BaseTestCase, TestCase):
         Hook to add some more specific tests after the basic add or delete
         operations are finished
         '''
-        pass
 
 
 class WorkoutManagerDeleteTestCase(WorkoutManagerTestCase):

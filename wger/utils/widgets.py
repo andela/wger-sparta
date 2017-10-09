@@ -210,7 +210,6 @@ class TranslatedSelectMultiple(BootstrapSelectMultiple):
     '''
     A SelectMultiple widget that translates the options
     '''
-    pass
 
 
 class TranslatedOriginalSelectMultiple(BootstrapSelectMultipleTranslatedOriginal):
@@ -219,7 +218,6 @@ class TranslatedOriginalSelectMultiple(BootstrapSelectMultipleTranslatedOriginal
     string as well. This is currently only used in the muscle list, where the
     translated muscles as well as the latin names are shown.
     '''
-    pass
 
 
 class TranslatedSelect(Select):

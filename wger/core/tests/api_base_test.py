@@ -103,7 +103,6 @@ class ApiGetTestCase(object):
         '''
         Test that ordering the resource works
         '''
-        pass
 
         # TODO: implement this
 
@@ -585,4 +584,3 @@ class ApiBaseResourceTestCase(BaseTestCase,
 
     All logic happens in the Api*TestCase classes
     '''
-    pass

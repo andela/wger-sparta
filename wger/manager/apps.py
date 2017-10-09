@@ -22,4 +22,4 @@ class ManagerConfig(AppConfig):
     verbose_name = "Manager"
 
     def ready(self):
-        import wger.manager.signals
+        pass
