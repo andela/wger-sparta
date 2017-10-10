@@ -8,12 +8,12 @@ from wger.core.tests.base_testcase import WorkoutManagerTestCase
 logger = logging.getLogger(__name__)
 
 
-class DeactivateUserTestCase(WorkoutManagerTestCase):
+class TestDeactivateUserTestCase(WorkoutManagerTestCase):
     """
     Test deactivate and activate user account
     """
 
-    def deactivate_user(self, fail=False):
+    def test_deactivate_user(self, fail=False):
         """
         Helper function to test activate and deactivate the user
         :param fail:
