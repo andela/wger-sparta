@@ -403,4 +403,5 @@ if os.getcwd() == "/app":
             conn_max_age=600
             )
     }
-    
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+DEBUG = False
