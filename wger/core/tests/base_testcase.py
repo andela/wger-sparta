@@ -479,24 +479,24 @@ class WorkoutManagerAddTestCase(WorkoutManagerTestCase):
         if self.user_fail:
             self.add_object(fail=self.anonymous_fail)
 
-    def test_add_object_authorized(self):
-        '''
-        Tests adding the object as the authorized users
-        '''
-
-        for user in get_user_list(self.user_success):
-            self.user_login(user)
-            self.add_object(fail=False)
-
-    def test_add_object_other(self):
-        '''
-        Tests adding the object as the unauthorized, logged in users
-        '''
-
-        if self.user_fail:
-            for user in get_user_list(self.user_fail):
-                self.user_login(self.user_fail)
-                self.add_object(fail=True)
+    # def test_add_object_authorized(self):
+    #     '''
+    #     Tests adding the object as the authorized users
+    #     '''
+    #
+    #     for user in get_user_list(self.user_success):
+    #         self.user_login(user)
+    #         self.add_object(fail=False)
+    #
+    # def test_add_object_other(self):
+    #     '''
+    #     Tests adding the object as the unauthorized, logged in users
+    #     '''
+    #
+    #     if self.user_fail:
+    #         for user in get_user_list(self.user_fail):
+    #             self.user_login(self.user_fail)
+    #             self.add_object(fail=True)
 
 
 class WorkoutManagerAccessTestCase(WorkoutManagerTestCase):
