@@ -34,6 +34,7 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt && pip install -r requirements_devel.txt
             ROOT=$(pwd)
+            ./manage.py makemigrations
             invoke create-settings  --settings-path $ROOT/settings.py --database-path $ROOT/database.sqlite
             #invoke bootstrap-wger --settings-path $ROOT/settings.py --no-start-server
 
