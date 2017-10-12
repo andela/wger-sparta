@@ -32,7 +32,6 @@ from wger.nutrition.models import Ingredient
 from wger.nutrition.models import Meal
 from wger.utils.constants import NUTRITION_TAB
 
-
 class IngredientRepresentationTestCase(WorkoutManagerTestCase):
     '''
     Test the representation of a model
@@ -59,7 +58,7 @@ class EditIngredientTestCase(WorkoutManagerEditTestCase):
     '''
     Tests editing an ingredient
     '''
-
+    
     object_class = Ingredient
     url = 'nutrition:ingredient:edit'
     pk = 1
@@ -73,7 +72,7 @@ class EditIngredientTestCase(WorkoutManagerEditTestCase):
             'protein': 20,
             'carbohydrates': 10,
             'license': 2,
-            'license_author': 'me!'}
+            'license_author': 2}
 
     def post_test_hook(self):
         '''
@@ -88,7 +87,7 @@ class AddIngredientTestCase(WorkoutManagerAddTestCase):
     '''
     Tests adding an ingredient
     '''
-
+    
     object_class = Ingredient
     url = 'nutrition:ingredient:add'
     user_fail = False
@@ -102,7 +101,7 @@ class AddIngredientTestCase(WorkoutManagerAddTestCase):
             'protein': 20,
             'carbohydrates': 10,
             'license': 2,
-            'license_author': 'me!'}
+            'license_author': 2}
 
     def post_test_hook(self):
         '''
