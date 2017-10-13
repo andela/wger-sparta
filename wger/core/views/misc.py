@@ -38,6 +38,7 @@ from wger.manager.models import Schedule
 from wger.nutrition.models import NutritionPlan
 from wger.weight.models import WeightEntry
 from wger.weight.helpers import get_last_entries
+from fitapp.utils import is_integrated
 
 
 logger = logging.getLogger(__name__)
@@ -87,9 +88,10 @@ def dashboard(request):
     Show the index page, in our case, the last workout and nutritional plan
     and the current weight
     '''
-
+    fitbit_connected = is_integrated(request.user)
+    print(fitbit_connected)
     template_data = {}
-
+    template_data['fitbit'] = fitbit_connected
     # Load the last workout, either from a schedule or a 'regular' one
     (current_workout, schedule) = Schedule.objects.get_current_workout(request.user)
 
