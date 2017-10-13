@@ -72,6 +72,18 @@ function wgerCustomModalInit()
             {% trans "Nr."%} {{ forloop.parentloop.counter }}
             {% if meal.time %} &ndash; {{meal.time|time:"H:i"}}{% endif %}
             </strong>
+
+            {% if is_owner %}
+            <div class="editoptions">
+                <a href="{% url 'nutrition:meal:delete' meal.id %}"
+                   title="{% trans 'Delete' %}">
+                   <span class="{% fa_class 'trash' %}"></span></a>
+                <a href="{% url 'nutrition:meal_item:add' meal.id %}"
+                   title="{% trans 'Add' %}"
+                   class="wger-modal-dialog edit-meal">
+                    <span class="{% fa_class 'plus' %}"></span></a>
+            </div>
+            {% endif %}
         </td>
         {% endifchanged %}
         <td>

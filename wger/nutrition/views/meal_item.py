@@ -55,6 +55,7 @@ class MealItemCreateView(WgerFormMixin, CreateView):
 
     model = MealItem
     form_class = MealItemForm
+    title = ugettext_lazy('Add meal item')
     template_name = 'meal_item/edit.html'
 
     def dispatch(self, request, *args, **kwargs):
