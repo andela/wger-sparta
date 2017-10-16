@@ -16,7 +16,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}
           - v1-dependencies-
-          
+
       - run:
           name: install dependencies
           command: |
@@ -26,18 +26,16 @@ jobs:
             ROOT=$(pwd)
             invoke create-settings  --settings-path $ROOT/settings.py --database-path $ROOT/database.sqlite
             ./manage.py makemigrations
-
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-          
+
       - run:
           name: run tests
           command: |
             . venv/bin/activate
             python manage.py test
-
       - store_artifacts:
           path: test-reports
           destination: test-reports
