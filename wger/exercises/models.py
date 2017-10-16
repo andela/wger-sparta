@@ -43,7 +43,7 @@ from wger.utils.cache import (
     reset_workout_canonical_form,
     cache_mapper
 )
-
+from wger.core.models import Author
 
 logger = logging.getLogger(__name__)
 
@@ -303,10 +303,10 @@ class Exercise(AbstractSubmissionModel, AbstractLicenseModel, models.Model):
         submitted exercises only)
         '''
         try:
-            user = User.objects.get(username=self.license_author)
+            user = User.objects.get(username=self.license_author.name)
         except User.DoesNotExist:
             return
-        if self.license_author and user.email:
+        if self.license_author.name and user.email:
             translation.activate(user.userprofile.notification_language.short_name)
             url = request.build_absolute_uri(self.get_absolute_url())
             subject = _('Exercise was successfully added to the general database')
@@ -331,10 +331,24 @@ class Exercise(AbstractSubmissionModel, AbstractLicenseModel, models.Model):
         if request.user.has_perm('exercises.add_exercise'):
             self.status = self.STATUS_ACCEPTED
             if not self.license_author:
-                self.license_author = request.get_host().split(':')[0]
+                name = request.get_host().split(':')[0]
+                author = Author.objects.filter(name=name).first()
+                if author:
+                    self.license_author = author
+                else:
+                    author = Author(name=name)
+                    author.save()
+                    self.license_author = author
         else:
             if not self.license_author:
-                self.license_author = request.user.username
+                name = request.user.username
+                author = Author.objects.filter(name=name).first()
+                if author:
+                    self.license_author = author
+                else:
+                    author = Author(name=name)
+                    author.save()
+                    self.license_author = author
 
             subject = _('New user submitted exercise')
             message = _(u'The user {0} submitted a new exercise "{1}".').format(
@@ -448,11 +462,25 @@ class ExerciseImage(AbstractSubmissionModel, AbstractLicenseModel, models.Model)
         if request.user.has_perm('exercises.add_exerciseimage'):
             self.status = self.STATUS_ACCEPTED
             if not self.license_author:
-                self.license_author = request.get_host().split(':')[0]
+                name = request.get_host().split(':')[0]
+                author = Author.objects.filter(name=name).first()
+                if author:
+                    self.license_author = author
+                else:
+                    author = Author(name=name)
+                    author.save()
+                    self.license_author = author
 
         else:
             if not self.license_author:
-                self.license_author = request.user.username
+                name = request.user.username
+                author = Author.objects.filter(name=name).first()
+                if author:
+                    self.license_author = author
+                else:
+                    author = Author(name=name)
+                    author.save()
+                    self.license_author = author
 
             subject = _('New user submitted image')
             message = _(u'The user {0} submitted a new image "{1}" for exercise {2}.').format(
@@ -463,7 +491,7 @@ class ExerciseImage(AbstractSubmissionModel, AbstractLicenseModel, models.Model)
                              six.text_type(message),
                              fail_silently=True)
 
-
+        
 @python_2_unicode_compatible
 class ExerciseComment(models.Model):
     '''
