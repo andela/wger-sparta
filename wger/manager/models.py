@@ -72,7 +72,7 @@ class Workout(models.Model):
         ('Mesocycle', 'Mesocycle - Two to six weeks'),
         ('Macrocycle', 'Macrocycle - Up to one year')
     ]
-    cycle = models.CharField(max_length=10, choices=CYCLE_CHOICES, blank=True, null=True)
+    cycle = models.CharField(max_length=10, choices=CYCLE_CHOICES, default='Microcycle')
 
     def get_absolute_url(self):
         '''
