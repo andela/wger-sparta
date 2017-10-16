@@ -91,3 +91,20 @@ def delete_meal(request, id):
         return HttpResponseRedirect(plan.get_absolute_url())
     else:
         return HttpResponseForbidden()
+
+
+@login_required
+def add(request, plan_pk):
+    '''
+    Add a new meal
+    '''
+
+    meal = Meal()
+    meal.plan = get_nutrition_plan(plan_pk)
+    meal.order = 1
+    meal.save()
+
+    return HttpResponseRedirect(meal.plan.get_absolute_url())
+
+def get_nutrition_plan(plan_pk):
+    return NutritionPlan.objects.get(id=plan_pk)
