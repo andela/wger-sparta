@@ -27,6 +27,10 @@ jobs:
             invoke create-settings  --settings-path $ROOT/settings.py --database-path $ROOT/database.sqlite
             ./manage.py makemigrations
 
+            ROOT=$(pwd)
+            invoke create-settings  --settings-path $ROOT/settings.py --database-path $ROOT/database.sqlite
+            #invoke bootstrap-wger --settings-path $ROOT/settings.py --no-start-server
+
       - save_cache:
           paths:
             - ./venv
