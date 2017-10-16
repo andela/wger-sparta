@@ -515,8 +515,8 @@ class Meal(models.Model):
     '''
 
     # Metaclass to set some other properties
-    class Meta:
-        ordering = ["time", ]
+    # class Meta:
+        # ordering = ["time", ]
 
     plan = models.ForeignKey(NutritionPlan,
                              verbose_name=_('Nutrition plan'),
@@ -575,6 +575,10 @@ class MealItem(models.Model):
     An item (component) of a meal
     '''
 
+    # Metaclass to set some other properties
+    class Meta:
+        ordering = ["time", ]
+
     meal = models.ForeignKey(Meal,
                              verbose_name=_('Nutrition plan'),
                              editable=False)
@@ -593,6 +597,10 @@ class MealItem(models.Model):
                                  verbose_name=_('Amount'),
                                  validators=[MinValueValidator(1),
                                              MaxValueValidator(1000)])
+
+    time = Html5TimeField(null=True,
+                          blank=True,
+                          verbose_name=_('Time (approx)'))
 
     def __str__(self):
         '''

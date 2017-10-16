@@ -65,7 +65,8 @@ patterns_plan = [
 # sub patterns for meals
 patterns_meal = [
     url(r'^(?P<plan_pk>\d+)/meal/add/$',
-        login_required(meal.MealCreateView.as_view()),
+        # login_required(meal.MealCreateView.as_view()),
+        meal.add,
         name='add'),
     url(r'^(?P<pk>\d+)/edit/$',
         login_required(meal.MealEditView.as_view()),
