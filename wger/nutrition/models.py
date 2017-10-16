@@ -109,50 +109,56 @@ class NutritionPlan(models.Model):
         '''
         Sums the nutritional info of all items in the plan
         '''
-        use_metric = self.user.userprofile.use_metric
-        unit = 'kg' if use_metric else 'lb'
-        result = {'total': {'energy': 0,
-                            'protein': 0,
-                            'carbohydrates': 0,
-                            'carbohydrates_sugar': 0,
-                            'fat': 0,
-                            'fat_saturated': 0,
-                            'fibres': 0,
-                            'sodium': 0},
-                  'percent': {'protein': 0,
-                              'carbohydrates': 0,
-                              'fat': 0},
-                  'per_kg': {'protein': 0,
-                             'carbohydrates': 0,
-                             'fat': 0},
-                  }
+        #  first get nutritional values from cache
+        nutritional_values = cache.get('nutritional_values')
 
-        # Energy
-        for meal in self.meal_set.select_related():
-            values = meal.get_nutritional_values(use_metric=use_metric)
-            for key in result['total'].keys():
-                result['total'][key] += values[key]
+        # calculate them only if they do not exist in cache
+        if not nutritional_values:
+            use_metric = self.user.userprofile.use_metric
+            unit = 'kg' if use_metric else 'lb'
+            result = {'total': {'energy': 0,
+                                'protein': 0,
+                                'carbohydrates': 0,
+                                'carbohydrates_sugar': 0,
+                                'fat': 0,
+                                'fat_saturated': 0,
+                                'fibres': 0,
+                                'sodium': 0},
+                    'percent': {'protein': 0,
+                                'carbohydrates': 0,
+                                'fat': 0},
+                    'per_kg': {'protein': 0,
+                                'carbohydrates': 0,
+                                'fat': 0},
+                    }
 
-        energy = result['total']['energy']
+            # Energy
+            for meal in self.meal_set.select_related():
+                values = meal.get_nutritional_values(use_metric=use_metric)
+                for key in result['total'].keys():
+                    result['total'][key] += values[key]
 
-        # In percent
-        if energy:
-            for key in result['percent'].keys():
-                result['percent'][key] = \
-                    result['total'][key] * ENERGY_FACTOR[key][unit] / energy * 100
+            energy = result['total']['energy']
 
-        # Per body weight
-        weight_entry = self.get_closest_weight_entry()
-        if weight_entry:
-            for key in result['per_kg'].keys():
-                result['per_kg'][key] = result['total'][key] / weight_entry.weight
+            # In percent
+            if energy:
+                for key in result['percent'].keys():
+                    result['percent'][key] = \
+                        result['total'][key] * ENERGY_FACTOR[key][unit] / energy * 100
 
-        # Only 2 decimal places, anything else doesn't make sense
-        for key in result.keys():
-            for i in result[key]:
-                result[key][i] = Decimal(result[key][i]).quantize(TWOPLACES)
+            # Per body weight
+            weight_entry = self.get_closest_weight_entry()
+            if weight_entry:
+                for key in result['per_kg'].keys():
+                    result['per_kg'][key] = result['total'][key] / weight_entry.weight
 
-        return result
+            # Only 2 decimal places, anything else doesn't make sense
+            for key in result.keys():
+                for i in result[key]:
+                    result[key][i] = Decimal(result[key][i]).quantize(TWOPLACES)
+            nutritional_values = result
+            print("The result ",result)
+        return nutritional_values
 
     def get_closest_weight_entry(self):
         '''
