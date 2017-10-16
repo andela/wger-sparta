@@ -39,6 +39,32 @@ class GymManager(models.Manager):
                              Q(groups__permissions=perm_gyms) |
                              Q(groups__permissions=perm_trainer)).distinct()
 
+    def get_active_members(self, gym_pk):
+        '''
+        Returns all members for this gym (i.e non-admin ones)
+        '''
+        perm_gym = Permission.objects.get(codename='manage_gym')
+        perm_gyms = Permission.objects.get(codename='manage_gyms')
+        perm_trainer = Permission.objects.get(codename='gym_trainer')
+
+        users = User.objects.filter(userprofile__gym_id=gym_pk, is_active=True)
+        return users.exclude(Q(groups__permissions=perm_gym) |
+                             Q(groups__permissions=perm_gyms) |
+                             Q(groups__permissions=perm_trainer)).distinct()
+
+    def get_deactivated_members(self, gym_pk):
+        '''
+        Returns all members for this gym (i.e non-admin ones)
+        '''
+        perm_gym = Permission.objects.get(codename='manage_gym')
+        perm_gyms = Permission.objects.get(codename='manage_gyms')
+        perm_trainer = Permission.objects.get(codename='gym_trainer')
+
+        users = User.objects.filter(userprofile__gym_id=gym_pk, is_active=False)
+        return users.exclude(Q(groups__permissions=perm_gym) |
+                             Q(groups__permissions=perm_gyms) |
+                             Q(groups__permissions=perm_trainer)).distinct()
+
     def get_admins(self, gym_pk):
         '''
         Returns all admins for this gym (i.e trainers, managers, etc.)
