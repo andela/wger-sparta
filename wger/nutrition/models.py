@@ -110,7 +110,7 @@ class NutritionPlan(models.Model):
         Sums the nutritional info of all items in the plan
         '''
         #  first get nutritional values from cache
-        nutritional_values = cache.get('nutritional_values')
+        nutritional_values = cache.get('nutritional_values-{0}'.format(self.id))
 
         # calculate them only if they do not exist in cache
         if not nutritional_values:
@@ -156,8 +156,7 @@ class NutritionPlan(models.Model):
             for key in result.keys():
                 for i in result[key]:
                     result[key][i] = Decimal(result[key][i]).quantize(TWOPLACES)
-            nutritional_values = result
-            print("The result ",result)
+            cache.set('nutritional_values-{0}'.format(self.id), result, 30)
         return nutritional_values
 
     def get_closest_weight_entry(self):
