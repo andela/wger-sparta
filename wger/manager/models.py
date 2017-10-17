@@ -847,6 +847,12 @@ class WorkoutSession(models.Model):
     Time the workout session ended
     '''
 
+    workout_log = models.ForeignKey(WorkoutLog, verbose_name=_('Workout log'), null=True)
+
+    """
+    Creates the relationship betweeen the workout sessions and the workout logs
+    """
+
     def __str__(self):
         '''
         Return a more human-readable representation
