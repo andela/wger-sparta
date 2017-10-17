@@ -156,7 +156,7 @@ class NutritionPlan(models.Model):
             for key in result.keys():
                 for i in result[key]:
                     result[key][i] = Decimal(result[key][i]).quantize(TWOPLACES)
-            cache.set('nutritional_values-{0}'.format(self.id), result, 30)
+            cache.set('nutritional_values-{0}'.format(self.id), result)
             nutritional_values = cache.get('nutritional_values-{0}'.format(self.id))
             print("Cache has been updated")
         return nutritional_values
