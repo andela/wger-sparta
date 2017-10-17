@@ -157,6 +157,8 @@ class NutritionPlan(models.Model):
                 for i in result[key]:
                     result[key][i] = Decimal(result[key][i]).quantize(TWOPLACES)
             cache.set('nutritional_values-{0}'.format(self.id), result, 30)
+            nutritional_values = cache.get('nutritional_values-{0}'.format(self.id))
+            print("Cache has been updated")
         return nutritional_values
 
     def get_closest_weight_entry(self):
