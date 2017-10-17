@@ -30,7 +30,7 @@ def post_delete_activity(sender, instance, **kwargs):
       Sender: NutritionPlan, Meal, MealItem
     '''
     plan = instance.get_owner_object()
-    cache.delete('nutrition_plans-{0}'.format(plan.id))
+    cache.delete('nutritional_values-{0}'.format(plan.id))
 
 @receiver(post_save, sender=NutritionPlan)
 @receiver(post_save, sender=Meal)
@@ -41,4 +41,4 @@ def post_save_activity(sender, instance, **kwargs):
       Sender: NutritionPlan, Meal, MealItem
     '''
     plan = instance.get_owner_object()
-    cache.delete('nutrition_values-{0}'.format(plan.id))
+    cache.delete('nutritional_values-{0}'.format(plan.id))
