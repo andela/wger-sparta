@@ -259,6 +259,7 @@ def registration(request):
     template_data['form_action'] = reverse('core:user:registration')
     template_data['submit_text'] = _('Register')
     template_data['extend_template'] = 'base.html'
+    template_data['social'] = True
 
     return render(request, 'form.html', template_data)
 
