@@ -189,6 +189,9 @@ urlpatterns = [
     url(r'^dashboard$',
         misc.dashboard,
         name='dashboard'),
+    #fitbit urls
+    url(r'^fitbit-login', misc.fitbitLogin, name="fitbit-login"),
+    url(r'^fitbit/complete', misc.fitbitComplete, name="fitbit-complete"),
 
     # Others
     url(r'^about$',
