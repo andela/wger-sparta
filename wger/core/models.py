@@ -39,7 +39,7 @@ class Author(models.Model):
     '''
     Author of an exercise
     '''
-    name = models.CharField(max_length=240,
+    name = models.CharField(max_length=240, unique=True,
                             verbose_name=_('Name'))
 
     def __str__(self):
