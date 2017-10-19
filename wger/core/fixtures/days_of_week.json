@@ -3,49 +3,200 @@
         "pk": 1, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Monday"
+            "day_of_week": "Monday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 2, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Tuesday"
+            "day_of_week": "Tuesday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 3, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Wednesday"
+            "day_of_week": "Wednesday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 4, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Thursday"
+            "day_of_week": "Thursday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 5, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Friday"
+            "day_of_week": "Friday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 6, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Saturday"
+            "day_of_week": "Saturday",
+            "the_type": "day"
         }
     }, 
     {
         "pk": 7, 
         "model": "core.daysofweek", 
         "fields": {
-            "day_of_week": "Sunday"
+            "day_of_week": "Sunday",
+            "the_type": "day"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 1",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 2",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 3",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 4",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 5",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "Week 6",
+            "the_type": "week"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "January",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "February",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "March",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "April",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "May",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "June",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "July",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "August",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "September",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "October",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "November",
+            "the_type": "month"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "core.daysofweek", 
+        "fields": {
+            "day_of_week": "December",
+            "the_type": "month"
         }
     }
 ]
