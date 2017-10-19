@@ -89,7 +89,6 @@ INSTALLED_APPS = (
     # support for social login
     'social_django',
     # fitbit application
-    'fitapp',
 )
 
 # added list of external libraries to be installed by bower
