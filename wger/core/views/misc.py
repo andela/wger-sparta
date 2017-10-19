@@ -138,9 +138,12 @@ def dashboard(request):
 
     return render(request, 'index.html', template_data)
 
-# user comparisons
-def user_comparisons():
-    pass
+
+def user_comparisons(request, username=None):
+    '''
+        View for allowing comparison of users
+    '''
+    return render(request, 'user_comparisons.html')
 
 
 class ContactClassView(TemplateView):
