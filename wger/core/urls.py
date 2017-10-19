@@ -190,6 +190,9 @@ urlpatterns = [
         misc.dashboard,
         name='dashboard'),
 
+    # Comparison between two users
+    url(r'^comparison$', misc.comparison, name='comparison'),
+
     # Others
     url(r'^about$',
         TemplateView.as_view(template_name="misc/about.html"),
