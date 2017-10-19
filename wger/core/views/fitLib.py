@@ -6,7 +6,7 @@ class Fitbit():
     # All information must be as on the https://dev.fitbit.com/apps page.
     CLIENT_ID     = settings.FITAPP_CONSUMER_KEY
     CLIENT_SECRET = settings.FITAPP_CONSUMER_SECRET
-    REDIRECT_URI  = os.getenv('REDIRECT_URI')
+    REDIRECT_URI  = os.getenv('REDIRECT_URI','http://localhost:8000/en/fitbit/complete/') 
 
     # Decide which information the FitBit.py should have access to.
     # Options: 'activity', 'heartrate', 'location', 'nutrition',
