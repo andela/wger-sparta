@@ -138,6 +138,10 @@ def dashboard(request):
 
     return render(request, 'index.html', template_data)
 
+# user comparisons
+def user_comparisons():
+    pass
+
 
 class ContactClassView(TemplateView):
     def get_context_data(self, **kwargs):

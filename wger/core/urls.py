@@ -191,7 +191,7 @@ urlpatterns = [
         name='dashboard'),
 
     # Comparison between two users
-    url(r'^comparison$', misc.comparison, name='comparison'),
+    url(r'^user_comparisons$', misc.user_comparisons, name='user_comparisons'),
 
     # Others
     url(r'^about$',
