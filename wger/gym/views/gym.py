@@ -85,11 +85,16 @@ class GymUserListView(LoginRequiredMixin, WgerMultiplePermissionRequiredMixin, L
     model = User
     permission_required = ('gym.manage_gym', 'gym.gym_trainer', 'gym.manage_gyms')
     template_name = 'gym/member_list.html'
+    show_active = True
 
     def dispatch(self, request, *args, **kwargs):
         '''
         Only managers and trainers for this gym can access the members
         '''
+        if 'deactivated' in request.path:
+            self.show_active = False
+        else:
+            self.show_active = True
         if request.user.has_perm('gym.manage_gyms') \
             or ((request.user.has_perm('gym.manage_gym')
                 or request.user.has_perm('gym.gym_trainer'))
@@ -103,11 +108,14 @@ class GymUserListView(LoginRequiredMixin, WgerMultiplePermissionRequiredMixin, L
         '''
         out = {'admins': [],
                'members': []}
-
-        for u in Gym.objects.get_members(self.kwargs['pk']).select_related('usercache'):
-            out['members'].append({'obj': u,
-                                   'last_log': u.usercache.last_activity})
-
+        if self.show_active:
+            for u in Gym.objects.get_active_members(self.kwargs['pk']).select_related('usercache'):
+                out['members'].append({'obj': u,
+                                    'last_log': u.usercache.last_activity})
+        else:
+            for u in Gym.objects.get_deactivated_members(self.kwargs['pk']).select_related('usercache'):
+                out['members'].append({'obj': u,
+                                    'last_log': u.usercache.last_activity})
         # admins list
         for u in Gym.objects.get_admins(self.kwargs['pk']):
             out['admins'].append({'obj': u,

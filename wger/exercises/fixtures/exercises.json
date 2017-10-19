@@ -1711,7 +1711,8 @@
             "category": 8,
             "uuid": "48a59aa8-4568-409c-8afe-f8cb99c558ea",
             "muscles": [
-                1
+                1,
+                20
             ],
             "license": 1,
             "name": "Biceps curls with dumbbell"
@@ -1773,7 +1774,10 @@
             "description": "<p>Hold the SZ-bar and lay down on a flat bench in such a way that around 1/4 of your head is over the edge. Stretch your arms with the bar and bend them so that the bar is lowered. Just before it touches your forehead, push it up.</p>\n<p>Pay attention to your elbows and arms: only the triceps are doing the work, the rest of the arms should not move.</p>",
             "equipment": [
                 8,
-                2
+                2,
+                17,
+                19,
+                20
             ],
             "creation_date": null,
             "category": 8,
@@ -1802,7 +1806,9 @@
             "category": 8,
             "uuid": "ee00d53e-4482-44aa-b780-bbc570061841",
             "muscles": [
-                5
+                5,
+                17,
+                19
             ],
             "license": 1,
             "name": "French press (skullcrusher) dumbbells"
@@ -1824,7 +1830,9 @@
             "category": 8,
             "uuid": "6dcc9adb-939c-4581-9e44-d0d73753997b",
             "muscles": [
-                1
+                1,
+                17,
+                19
             ],
             "license": 1,
             "name": "Hammercurls"
@@ -1859,7 +1867,10 @@
             "language": 2,
             "muscles_secondary": [
                 2,
-                4
+                4,
+                17,
+                19,
+                20
             ],
             "description": "<p>Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower.</p>",
             "equipment": [
@@ -2030,7 +2041,10 @@
             "language": 2,
             "muscles_secondary": [
                 2,
-                5
+                5,
+                17,
+                19,
+                20
             ],
             "description": "<p>The movement is very similar to benchpressing with a barbell, however, the weight is brought down to the chest at a lower point.</p>\n<p>Hold two dumbbells and lay down on a bench. Hold the weights next to the chest, at the height of your nipples and press them up till the arms are stretched. Let the weight slowly and controlled down.</p>",
             "equipment": [
@@ -2055,7 +2069,10 @@
             "status": "2",
             "language": 2,
             "muscles_secondary": [
-                2
+                2,
+                17,
+                19,
+                20
             ],
             "description": "<p>Sit on the butterfly machine, the feet have a good contact with the floor, the upper arms are parallel to the floor. Press your arms together till the handles are practically together (but aren't!). Go slowly back. The weights should stay all the time in the air.</p>",
             "equipment": [],
@@ -2234,7 +2251,10 @@
             "muscles_secondary": [
                 2,
                 1,
-                13
+                13,
+                17,
+                19,
+                20
             ],
             "description": "<p>The execution of this exercise is very similar to the regular bent over rowing, only that the bar is fixed here.</p>\n<p>Grab the barbell with a wide grip (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise. Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.</p>",
             "equipment": [],
@@ -2669,7 +2689,10 @@
             "uuid": "61271a8e-6a00-4898-8dc3-ea9ef913f25e",
             "muscles": [
                 2,
-                9
+                9,
+                17,
+                19,
+                20
             ],
             "license": 1,
             "name": "Upright row, SZ-bar"
@@ -2749,7 +2772,10 @@
             "category": 13,
             "uuid": "382731d2-ae07-4a3c-a055-09dadd5f12e0",
             "muscles": [
-                2
+                2,
+                17,
+                19,
+                20
             ],
             "license": 1,
             "name": "Seitheben am Kabel, einarmig"
@@ -2791,7 +2817,8 @@
             "category": 8,
             "uuid": "06e9de49-ac1b-45c1-b289-475118932434",
             "muscles": [
-                1
+                1,
+                20
             ],
             "license": 1,
             "name": "Hammercurls am Seil"
@@ -2880,7 +2907,8 @@
             "category": 8,
             "uuid": "5baf40e5-ea3c-4f8d-b60a-d294ee2de55b",
             "muscles": [
-                1
+                1,
+                20
             ],
             "license": 1,
             "name": "Hammercurls on cable"
@@ -7678,771 +7706,771 @@
         "model": "exercises.exercisecomment"
     },
     {
-        "pk": 18,
-        "fields": {
-            "exercise": 19,
-            "comment": "Ellenbogen nach vorne"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 19,
-        "fields": {
-            "exercise": 6,
-            "comment": "Knie nach au\u00dfen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 20,
-        "fields": {
-            "exercise": 46,
-            "comment": "Ellenbogen am K\u00f6rper, nicht bewegen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 21,
-        "fields": {
-            "exercise": 46,
-            "comment": "Beine ausstrecken, F\u00fc\u00dfe zusammen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 22,
-        "fields": {
-            "exercise": 15,
-            "comment": "Arme oben nicht ganz ausstrecken"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 23,
-        "fields": {
-            "exercise": 7,
-            "comment": "Nach unten gehen, bis die Schenkel parallel zum Boden sind"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 24,
-        "fields": {
-            "exercise": 72,
-            "comment": "Vorderen Fu\u00df ca 50% drau\u00dfen (schwebend)"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 25,
-        "fields": {
-            "exercise": 72,
-            "comment": "Brust raus"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 26,
-        "fields": {
-            "exercise": 49,
-            "comment": "Gerade sitzen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 27,
-        "fields": {
-            "exercise": 49,
-            "comment": "Brust raus"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 28,
-        "fields": {
-            "exercise": 6,
-            "comment": "Fl\u00fcssige Bewegung, keine Pausen oben oder unten"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 29,
-        "fields": {
-            "exercise": 66,
-            "comment": "Ellenbogen nach au\u00dfen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 30,
-        "fields": {
-            "exercise": 35,
-            "comment": "Beine nicht ganz ausstrecken"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":18,
+       "fields":{
+          "exercise":19,
+          "comment":"Ellenbogen nach vorne"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":19,
+       "fields":{
+          "exercise":6,
+          "comment":"Knie nach außen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":20,
+       "fields":{
+          "exercise":46,
+          "comment":"Ellenbogen am Körper, nicht bewegen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":21,
+       "fields":{
+          "exercise":46,
+          "comment":"Beine ausstrecken, Füße zusammen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":22,
+       "fields":{
+          "exercise":15,
+          "comment":"Arme oben nicht ganz ausstrecken"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":23,
+       "fields":{
+          "exercise":7,
+          "comment":"Nach unten gehen, bis die Schenkel parallel zum Boden sind"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":24,
+       "fields":{
+          "exercise":72,
+          "comment":"Vorderen Fuß ca 50% draußen (schwebend)"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":25,
+       "fields":{
+          "exercise":72,
+          "comment":"Brust raus"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":26,
+       "fields":{
+          "exercise":49,
+          "comment":"Gerade sitzen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":27,
+       "fields":{
+          "exercise":49,
+          "comment":"Brust raus"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":28,
+       "fields":{
+          "exercise":6,
+          "comment":"Flüssige Bewegung, keine Pausen oben oder unten"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":29,
+       "fields":{
+          "exercise":66,
+          "comment":"Ellenbogen nach außen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":30,
+       "fields":{
+          "exercise":35,
+          "comment":"Beine nicht ganz ausstrecken"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 31,
-        "fields": {
-            "exercise": 73,
-            "comment": "Arme angewinkelt"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":31,
+       "fields":{
+          "exercise":73,
+          "comment":"Arme angewinkelt"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 32,
-        "fields": {
-            "exercise": 73,
-            "comment": "Arme nicht zu weit nach unten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":32,
+       "fields":{
+          "exercise":73,
+          "comment":"Arme nicht zu weit nach unten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 33,
-        "fields": {
-            "exercise": 68,
-            "comment": "Arme nicht durchstrecken"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":33,
+       "fields":{
+          "exercise":68,
+          "comment":"Arme nicht durchstrecken"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 34,
-        "fields": {
-            "exercise": 68,
-            "comment": "Ellenbogen nach hinten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":34,
+       "fields":{
+          "exercise":68,
+          "comment":"Ellenbogen nach hinten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 35,
-        "fields": {
-            "exercise": 42,
-            "comment": "Ellenbogen nach au\u00dfen"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":35,
+       "fields":{
+          "exercise":42,
+          "comment":"Ellenbogen nach außen"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 36,
-        "fields": {
-            "exercise": 62,
-            "comment": "Arme hochziehen bis zum Kinn"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":36,
+       "fields":{
+          "exercise":62,
+          "comment":"Arme hochziehen bis zum Kinn"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 37,
-        "fields": {
-            "exercise": 62,
-            "comment": "Eher einen engen Griff machen"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":37,
+       "fields":{
+          "exercise":62,
+          "comment":"Eher einen engen Griff machen"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 38,
-        "fields": {
-            "exercise": 20,
-            "comment": "Wenn oben, drehe die H\u00e4nde etwas nach unten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":38,
+       "fields":{
+          "exercise":20,
+          "comment":"Wenn oben, drehe die Hände etwas nach unten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 39,
-        "fields": {
-            "exercise": 48,
-            "comment": "Brust raus, Kopf nach hinten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":39,
+       "fields":{
+          "exercise":48,
+          "comment":"Brust raus, Kopf nach hinten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 40,
-        "fields": {
-            "exercise": 48,
-            "comment": "R\u00fccken gerade"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":40,
+       "fields":{
+          "exercise":48,
+          "comment":"Rücken gerade"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 41,
-        "fields": {
-            "exercise": 70,
-            "comment": "Brust raus"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":41,
+       "fields":{
+          "exercise":70,
+          "comment":"Brust raus"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 42,
-        "fields": {
-            "exercise": 70,
-            "comment": "Fast horizontal vorgebeugt"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":42,
+       "fields":{
+          "exercise":70,
+          "comment":"Fast horizontal vorgebeugt"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 43,
-        "fields": {
-            "exercise": 70,
-            "comment": "Zum Bauchnabel ziehen, nicht weiter oben"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":43,
+       "fields":{
+          "exercise":70,
+          "comment":"Zum Bauchnabel ziehen, nicht weiter oben"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 44,
-        "fields": {
-            "exercise": 60,
-            "comment": "Oben 1-2 Sekunden halten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":44,
+       "fields":{
+          "exercise":60,
+          "comment":"Oben 1-2 Sekunden halten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 45,
-        "fields": {
-            "exercise": 37,
-            "comment": "Brust raus"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":45,
+       "fields":{
+          "exercise":37,
+          "comment":"Brust raus"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 46,
-        "fields": {
-            "exercise": 37,
-            "comment": "Zum Bauchnabel ziehen, nicht weiter oben"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":46,
+       "fields":{
+          "exercise":37,
+          "comment":"Zum Bauchnabel ziehen, nicht weiter oben"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 47,
-        "fields": {
-            "exercise": 24,
-            "comment": "Fl\u00fcssige Bewegung, keine Pausen oben oder unten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":47,
+       "fields":{
+          "exercise":24,
+          "comment":"Flüssige Bewegung, keine Pausen oben oder unten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 49,
-        "fields": {
-            "exercise": 28,
-            "comment": "F\u00fc\u00dfe zusammen, nicht wie beim Ausfallschritt"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":49,
+       "fields":{
+          "exercise":28,
+          "comment":"Füße zusammen, nicht wie beim Ausfallschritt"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 50,
-        "fields": {
-            "exercise": 28,
-            "comment": "Arme eher zusammen, direkt unter dem Ellenbogen auf die Bank"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":50,
+       "fields":{
+          "exercise":28,
+          "comment":"Arme eher zusammen, direkt unter dem Ellenbogen auf die Bank"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 51,
-        "fields": {
-            "exercise": 28,
-            "comment": "Fl\u00fcssige Bewegung, keine Pausen oben oder unten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":51,
+       "fields":{
+          "exercise":28,
+          "comment":"Flüssige Bewegung, keine Pausen oben oder unten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 52,
-        "fields": {
-            "exercise": 28,
-            "comment": "Arme ganz ausstrecken"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":52,
+       "fields":{
+          "exercise":28,
+          "comment":"Arme ganz ausstrecken"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 54,
-        "fields": {
-            "exercise": 76,
-            "comment": "R\u00fccken gerade, keinen Buckel machen!"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":54,
+       "fields":{
+          "exercise":76,
+          "comment":"Rücken gerade, keinen Buckel machen!"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 55,
-        "fields": {
-            "exercise": 55,
-            "comment": "Oben keine Pause, sofort wieder runter."
-        },
-        "model": "exercises.exercisecomment"
+       "pk":55,
+       "fields":{
+          "exercise":55,
+          "comment":"Oben keine Pause, sofort wieder runter."
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 56,
-        "fields": {
-            "exercise": 76,
-            "comment": "Etwas in die Knie gehen und nach hinten ziehen"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":56,
+       "fields":{
+          "exercise":76,
+          "comment":"Etwas in die Knie gehen und nach hinten ziehen"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 57,
-        "fields": {
-            "exercise": 33,
-            "comment": "Schnell nach untern ziehen."
-        },
-        "model": "exercises.exercisecomment"
+       "pk":57,
+       "fields":{
+          "exercise":33,
+          "comment":"Schnell nach untern ziehen."
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 58,
-        "fields": {
-            "exercise": 29,
-            "comment": "Arme oben nicht ganz ausstrecken"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":58,
+       "fields":{
+          "exercise":29,
+          "comment":"Arme oben nicht ganz ausstrecken"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 59,
-        "fields": {
-            "exercise": 44,
-            "comment": "Fl\u00fcssige Bewegung, keine Pausen oben oder unten"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":59,
+       "fields":{
+          "exercise":44,
+          "comment":"Flüssige Bewegung, keine Pausen oben oder unten"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 60,
-        "fields": {
-            "exercise": 54,
-            "comment": "Fl\u00fcssige Bewegung, keine Pausen machen"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":60,
+       "fields":{
+          "exercise":54,
+          "comment":"Flüssige Bewegung, keine Pausen machen"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 61,
-        "fields": {
-            "exercise": 47,
-            "comment": "Arme immer im rechten Winkel zum K\u00f6rper"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":61,
+       "fields":{
+          "exercise":47,
+          "comment":"Arme immer im rechten Winkel zum Körper"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 62,
-        "fields": {
-            "exercise": 8,
-            "comment": "Arme w\u00e4hrend der \u00dcbung nicht beugen."
-        },
-        "model": "exercises.exercisecomment"
+       "pk":62,
+       "fields":{
+          "exercise":8,
+          "comment":"Arme während der Übung nicht beugen."
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 63,
-        "fields": {
-            "exercise": 137,
-            "comment": "Arme w\u00e4hrend der \u00dcbung nicht beugen."
-        },
-        "model": "exercises.exercisecomment"
+       "pk":63,
+       "fields":{
+          "exercise":137,
+          "comment":"Arme während der Übung nicht beugen."
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 64,
-        "fields": {
-            "exercise": 92,
-            "comment": "Bend yourself inwards, the elbows point to the knees"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":64,
+       "fields":{
+          "exercise":92,
+          "comment":"Bend yourself inwards, the elbows point to the knees"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 65,
-        "fields": {
-            "exercise": 92,
-            "comment": "Make a fast movement when going down"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":65,
+       "fields":{
+          "exercise":92,
+          "comment":"Make a fast movement when going down"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 66,
-        "fields": {
-            "exercise": 80,
-            "comment": "Fluid movements with no pauses at the top or the bottom"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":66,
+       "fields":{
+          "exercise":80,
+          "comment":"Fluid movements with no pauses at the top or the bottom"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 67,
-        "fields": {
-            "exercise": 81,
-            "comment": "Fluid movements with no pauses at the top or the bottom"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":67,
+       "fields":{
+          "exercise":81,
+          "comment":"Fluid movements with no pauses at the top or the bottom"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 68,
-        "fields": {
-            "exercise": 74,
-            "comment": "Fluid movements with no pauses at the top or the bottom"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":68,
+       "fields":{
+          "exercise":74,
+          "comment":"Fluid movements with no pauses at the top or the bottom"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 69,
-        "fields": {
-            "exercise": 82,
-            "comment": "Don't stretch your amrs completly"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":69,
+       "fields":{
+          "exercise":82,
+          "comment":"Don't stretch your amrs completly"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 70,
-        "fields": {
-            "exercise": 83,
-            "comment": "Don't stretch your amrs completly"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":70,
+       "fields":{
+          "exercise":83,
+          "comment":"Don't stretch your amrs completly"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 71,
-        "fields": {
-            "exercise": 83,
-            "comment": "The elbows always point back, don't let them open sidewards"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":71,
+       "fields":{
+          "exercise":83,
+          "comment":"The elbows always point back, don't let them open sidewards"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 72,
-        "fields": {
-            "exercise": 84,
-            "comment": "Don't move the elbows during the exercise"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":72,
+       "fields":{
+          "exercise":84,
+          "comment":"Don't move the elbows during the exercise"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 73,
-        "fields": {
-            "exercise": 85,
-            "comment": "Don't move the elbows during the exercise"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":73,
+       "fields":{
+          "exercise":85,
+          "comment":"Don't move the elbows during the exercise"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 74,
-        "fields": {
-            "exercise": 86,
-            "comment": "Keep the elbows right next to the body and don't move them"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":74,
+       "fields":{
+          "exercise":86,
+          "comment":"Keep the elbows right next to the body and don't move them"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 75,
-        "fields": {
-            "exercise": 109,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":75,
+       "fields":{
+          "exercise":109,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 76,
-        "fields": {
-            "exercise": 109,
-            "comment": "Don't arch your back!"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":76,
+       "fields":{
+          "exercise":109,
+          "comment":"Don't arch your back!"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 77,
-        "fields": {
-            "exercise": 109,
-            "comment": "Pull the weight fast"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":77,
+       "fields":{
+          "exercise":109,
+          "comment":"Pull the weight fast"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 78,
-        "fields": {
-            "exercise": 109,
-            "comment": "Pull the weight towards your belly button, not further up"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":78,
+       "fields":{
+          "exercise":109,
+          "comment":"Pull the weight towards your belly button, not further up"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 79,
-        "fields": {
-            "exercise": 59,
-            "comment": "Zum Bauchnabel ziehen, nicht weiter oben"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":79,
+       "fields":{
+          "exercise":59,
+          "comment":"Zum Bauchnabel ziehen, nicht weiter oben"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 80,
-        "fields": {
-            "exercise": 70,
-            "comment": "Schnell nach oben ziehen"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":80,
+       "fields":{
+          "exercise":70,
+          "comment":"Schnell nach oben ziehen"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 81,
-        "fields": {
-            "exercise": 110,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":81,
+       "fields":{
+          "exercise":110,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 82,
-        "fields": {
-            "exercise": 110,
-            "comment": "Don't arch your back!"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":82,
+       "fields":{
+          "exercise":110,
+          "comment":"Don't arch your back!"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 83,
-        "fields": {
-            "exercise": 110,
-            "comment": "Pull the weight fast"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":83,
+       "fields":{
+          "exercise":110,
+          "comment":"Pull the weight fast"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 84,
-        "fields": {
-            "exercise": 110,
-            "comment": "Pull the weight towards your belly button, not further up"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":84,
+       "fields":{
+          "exercise":110,
+          "comment":"Pull the weight towards your belly button, not further up"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 85,
-        "fields": {
-            "exercise": 105,
-            "comment": "Don't arch your back!"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":85,
+       "fields":{
+          "exercise":105,
+          "comment":"Don't arch your back!"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 86,
-        "fields": {
-            "exercise": 128,
-            "comment": "Make a 1-2 sec. pause at the top"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":86,
+       "fields":{
+          "exercise":128,
+          "comment":"Make a 1-2 sec. pause at the top"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 87,
-        "fields": {
-            "exercise": 107,
-            "comment": "Keep your head up"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":87,
+       "fields":{
+          "exercise":107,
+          "comment":"Keep your head up"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 88,
-        "fields": {
-            "exercise": 107,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":88,
+       "fields":{
+          "exercise":107,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 89,
-        "fields": {
-            "exercise": 107,
-            "comment": "The elbows always point back, don't let them open sidewards"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":89,
+       "fields":{
+          "exercise":107,
+          "comment":"The elbows always point back, don't let them open sidewards"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 90,
-        "fields": {
-            "exercise": 106,
-            "comment": "Don't arch your back!"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":90,
+       "fields":{
+          "exercise":106,
+          "comment":"Don't arch your back!"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 91,
-        "fields": {
-            "exercise": 106,
-            "comment": "Go somewhat down in your knees and pull back"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":91,
+       "fields":{
+          "exercise":106,
+          "comment":"Go somewhat down in your knees and pull back"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 92,
-        "fields": {
-            "exercise": 108,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":92,
+       "fields":{
+          "exercise":108,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 93,
-        "fields": {
-            "exercise": 108,
-            "comment": "Pull the weight towards your belly button, not further up"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":93,
+       "fields":{
+          "exercise":108,
+          "comment":"Pull the weight towards your belly button, not further up"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 95,
-        "fields": {
-            "exercise": 112,
-            "comment": "Make no pauses, go immediately down"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":95,
+       "fields":{
+          "exercise":112,
+          "comment":"Make no pauses, go immediately down"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 96,
-        "fields": {
-            "exercise": 115,
-            "comment": "Fluid movements with no pauses at the top or the bottom"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":96,
+       "fields":{
+          "exercise":115,
+          "comment":"Fluid movements with no pauses at the top or the bottom"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 97,
-        "fields": {
-            "exercise": 114,
-            "comment": "Fluid movements with no pauses at the top or the bottom"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":97,
+       "fields":{
+          "exercise":114,
+          "comment":"Fluid movements with no pauses at the top or the bottom"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 98,
-        "fields": {
-            "exercise": 114,
-            "comment": "The knees point slightly outwards"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":98,
+       "fields":{
+          "exercise":114,
+          "comment":"The knees point slightly outwards"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 99,
-        "fields": {
-            "exercise": 111,
-            "comment": "Make a pause at the bottom of 1sec, at the top, 3"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":99,
+       "fields":{
+          "exercise":111,
+          "comment":"Make a pause at the bottom of 1sec, at the top, 3"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 100,
-        "fields": {
-            "exercise": 111,
-            "comment": "Go down till your thighs are parallel to the floor"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":100,
+       "fields":{
+          "exercise":111,
+          "comment":"Go down till your thighs are parallel to the floor"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 102,
-        "fields": {
-            "exercise": 127,
-            "comment": "Pull the weight till your chin"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":102,
+       "fields":{
+          "exercise":127,
+          "comment":"Pull the weight till your chin"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 103,
-        "fields": {
-            "exercise": 127,
-            "comment": "Make a rather narrow grip"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":103,
+       "fields":{
+          "exercise":127,
+          "comment":"Make a rather narrow grip"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 104,
-        "fields": {
-            "exercise": 140,
-            "comment": "Keep your head up"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":104,
+       "fields":{
+          "exercise":140,
+          "comment":"Keep your head up"
+       },
+       "model":"exercises.exercisecomment"
     },
     {
-        "pk": 105,
-        "fields": {
-            "exercise": 140,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 106,
-        "fields": {
-            "exercise": 141,
-            "comment": "Sit straight"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 107,
-        "fields": {
-            "exercise": 141,
-            "comment": "Keep your chest out"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 108,
-        "fields": {
-            "exercise": 3,
-            "comment": "Ellenbogen am K\u00f6rper, nicht bewegen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 109,
-        "fields": {
-            "exercise": 129,
-            "comment": "Don't move the elbows during the exercise"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 110,
-        "fields": {
-            "exercise": 192,
-            "comment": "Don't stretch your arms completly"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 111,
-        "fields": {
-            "exercise": 230,
-            "comment": "Beine gestreckt und gerade halten, nicht knicken"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 112,
-        "fields": {
-            "exercise": 231,
-            "comment": "Ellenbogen eng am K\u00f6rper"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 113,
-        "fields": {
-            "exercise": 231,
-            "comment": "Nicht mit dem K\u00f6rper schwingen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 114,
-        "fields": {
-            "exercise": 232,
-            "comment": "Ellenbogen eng am K\u00f6rper, nicht bewegen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 115,
-        "fields": {
-            "exercise": 232,
-            "comment": "Nicht zu hohe Gewichte nehmen"
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 116,
-        "fields": {
-            "exercise": 386,
-            "comment": "Always keep your elbows close to your head "
-        },
-        "model": "exercises.exercisecomment"
-    },
-    {
-        "pk": 117,
-        "fields": {
-            "exercise": 386,
-            "comment": "Move only the forearms"
-        },
-        "model": "exercises.exercisecomment"
+       "pk":105,
+       "fields":{
+          "exercise":140,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":106,
+       "fields":{
+          "exercise":141,
+          "comment":"Sit straight"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":107,
+       "fields":{
+          "exercise":141,
+          "comment":"Keep your chest out"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":108,
+       "fields":{
+          "exercise":3,
+          "comment":"Ellenbogen am Körper, nicht bewegen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":109,
+       "fields":{
+          "exercise":129,
+          "comment":"Don't move the elbows during the exercise"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":110,
+       "fields":{
+          "exercise":192,
+          "comment":"Don't stretch your arms completly"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":111,
+       "fields":{
+          "exercise":230,
+          "comment":"Beine gestreckt und gerade halten, nicht knicken"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":112,
+       "fields":{
+          "exercise":231,
+          "comment":"Ellenbogen eng am Körper"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":113,
+       "fields":{
+          "exercise":231,
+          "comment":"Nicht mit dem Körper schwingen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":114,
+       "fields":{
+          "exercise":232,
+          "comment":"Ellenbogen eng am Körper, nicht bewegen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":115,
+       "fields":{
+          "exercise":232,
+          "comment":"Nicht zu hohe Gewichte nehmen"
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":116,
+       "fields":{
+          "exercise":386,
+          "comment":"Always keep your elbows close to your head "
+       },
+       "model":"exercises.exercisecomment"
+    },
+    {
+       "pk":117,
+       "fields":{
+          "exercise":386,
+          "comment":"Move only the forearms"
+       },
+       "model":"exercises.exercisecomment"
     }
-]
+ ]

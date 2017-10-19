@@ -13,7 +13,24 @@ $(document).ready( function () {
     });
 });
 </script>
-
+<h4 style="float:left;">Users</h4>
+{% if gym %}
+<ul class="nav nav-tabs" style="margin-left: 60px;">
+    <li role="presentation"
+        {% if not 'deactivated' in request.path %}    
+            class="active"
+        {% endif %}>
+        <a href="{% url 'gym:gym:user-list' gym.pk %}">Active</a>
+    </li>
+    <li role="presentation"
+        {% if 'deactivated' in request.path %}    
+            class="active"
+        {% endif %}>
+        <a href="{% url 'gym:gym:user-deactivated-list' gym.pk %}">Deactivated</a>
+    </li>
+</ul>
+{% endif %}
+<br />
 <table class="table table-hover" id="main_member_list">
 <thead>
 <tr>

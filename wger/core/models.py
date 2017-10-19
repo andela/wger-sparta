@@ -35,6 +35,17 @@ from wger.weight.models import WeightEntry
 
 
 @python_2_unicode_compatible
+class Author(models.Model):
+    '''
+    Author of an exercise
+    '''
+    name = models.CharField(max_length=240,
+                            verbose_name=_('Name'))
+    
+    def __str__(self):
+        return self.name
+
+@python_2_unicode_compatible
 class Language(models.Model):
     '''
     Language of an item (exercise, workout, etc.)
