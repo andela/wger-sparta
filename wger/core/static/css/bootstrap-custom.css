@@ -21,13 +21,11 @@
  *
  **************************************************************/
 
-
 html {
-  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
-
 
 body {
     font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
@@ -35,7 +33,7 @@ body {
 }
 
 @media (min-width: 992px) {
-    #main-content{
+    #main-content {
         min-height: 40em;
     }
 }
@@ -44,12 +42,11 @@ body {
     margin-bottom: 0px;
 }
 
-.close{
-    float:right;
+.close {
+    float: right;
     opacity: 0.2;
     font-weight: bold;
 }
-
 
 .carousel a:hover, .carousel a:focus {
     background-color: transparent;
@@ -63,10 +60,9 @@ body {
     margin-top: 10px;
 }
 
-
 .application-name {
     text-shadow: 2px 3px 3px #292929;
-    font-family: "Open Sans Bold",Arial,Helvetica,sans-serif;
+    font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 180%;
     color: #FFF;
@@ -74,7 +70,6 @@ body {
     text-align: center;
     margin-top: 0.2em;
 }
-
 
 /**************************************************************
  * Off Canvas menu
@@ -112,8 +107,8 @@ body {
     .row-offcanvas {
         position: relative;
         -webkit-transition: all .25s ease-out;
-           -moz-transition: all .25s ease-out;
-                transition: all .25s ease-out;
+        -moz-transition: all .25s ease-out;
+        transition: all .25s ease-out;
     }
 
     .row-offcanvas-right {
@@ -155,7 +150,6 @@ body {
     }
 }
 
-
 /**************************************************************
  * Alerts
  **************************************************************/
@@ -163,7 +157,6 @@ body {
 .label, .badge {
     font-weight: normal;
 }
-
 
 /*
  * Make the 'close' button on alerts more prominent
@@ -177,28 +170,32 @@ body {
  * Buttons
  **************************************************************/
 .btn {
-  overflow: hidden;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .btn-default {
-  color: #333;
-  background-color: #eeeeec;
-  border-color: #ccc;
+    color: #333;
+    background-color: #eeeeec;
+    border-color: #ccc;
 }
+
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  color: black;
-  background-color: #babdb6;
-  border-color: #888a85;
+    color: black;
+    background-color: #babdb6;
+    border-color: #888a85;
 }
+
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  background-image: none;
+    background-image: none;
 }
+
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -214,41 +211,42 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #babdb6;
-  border-color: #ccc;
+    background-color: #babdb6;
+    border-color: #ccc;
 }
+
 .btn-default .badge {
-  color: #fff;
-  background-color: #babdb6;
+    color: #fff;
+    background-color: #babdb6;
 }
 
 /**************************************************************
  * Headers in sidebar
  **************************************************************/
- #main-sidebar h4, #main-sidebar .h4,
- #main-sidebar h5, #main-sidebar .h5,
- #main-sidebar h6, #main-sidebar .h6 {
+#main-sidebar h4, #main-sidebar .h4,
+#main-sidebar h5, #main-sidebar .h5,
+#main-sidebar h6, #main-sidebar .h6 {
     margin-top: 0px;
 }
 
-
- /**************************************************************
- * Fix issue with body shifting
- *
- * Opening modal dialogs shifted the whole body by 15px to the left.
- * While this appears to be https://github.com/twbs/bootstrap/issues/9855
- * it doesn't seem to be fixed here. When it does, these fixes can be removed
- **************************************************************/
- body.modal-open {
+/**************************************************************
+* Fix issue with body shifting
+*
+* Opening modal dialogs shifted the whole body by 15px to the left.
+* While this appears to be https://github.com/twbs/bootstrap/issues/9855
+* it doesn't seem to be fixed here. When it does, these fixes can be removed
+**************************************************************/
+body.modal-open {
     padding-right: 0 !important;
 
 }
+
 .social {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.fa {
+.social .fa {
     font-size: 40px;
     width: 60px;
     height:60px;
@@ -257,24 +255,24 @@ fieldset[disabled] .btn-default.active {
     text-decoration: none !important;
     margin: 5px 2px;
   }
-.fa::before {
+.social .fa::before {
     line-height: 60px;
 }  
-  .fa:hover {
+.social .fa:hover {
       opacity: 0.7;
   }
   
-  .fa-facebook {
+  .social .fa-facebook {
     background: #3B5998;
     color: white;
   }
   
-  .fa-twitter {
+  .social .fa-twitter {
     background: #55ACEE;
     color: white;
   }
   
-  .fa-google {
+  .social .fa-google {
     background: #dd4b39;
     color: white;
   }
