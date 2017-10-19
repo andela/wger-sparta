@@ -34,6 +34,17 @@ from wger.weight.models import WeightEntry
 
 
 @python_2_unicode_compatible
+class Author(models.Model):
+    '''
+    Author of an exercise
+    '''
+    name = models.CharField(max_length=240,
+                            verbose_name=_('Name'))
+    
+    def __str__(self):
+        return self.name
+
+@python_2_unicode_compatible
 class Language(models.Model):
     '''
     Language of an item (exercise, workout, etc.)
@@ -506,7 +517,7 @@ class DaysOfWeek(models.Model):
 
     This model is needed so that 'Day' can have multiple days of the week selected
     '''
-
+    the_type = models.CharField(max_length=9, null=True, blank=True)
     day_of_week = models.CharField(max_length=9,
                                    verbose_name=_('Day of the week'))
 

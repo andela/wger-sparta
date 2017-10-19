@@ -70,6 +70,22 @@ class GymUserOverviewTest(WorkoutManagerAccessTestCase):
                  'trainer4',
                  'manager3')
 
+class GymUserDeactivatedOverviewTest(WorkoutManagerAccessTestCase):
+    '''
+    Tests accessing the gym user overview page
+    '''
+    url = reverse_lazy('gym:gym:user-deactivated-list', kwargs={'pk': 1})
+    anonymous_fail = True
+    user_success = ('admin',
+                    'trainer2',
+                    'trainer3',
+                    'manager1',
+                    'general_manager1',
+                    'general_manager2')
+    user_fail = ('member1',
+                 'member2',
+                 'trainer4',
+                 'manager3')
 
 class AddGymTestCase(WorkoutManagerAddTestCase):
     '''
@@ -107,6 +123,7 @@ class DeleteGymTestCase(WorkoutManagerDeleteTestCase):
                  'trainer4',
                  'manager1',
                  'manager3')
+
 
 delete_testcase_add_methods(DeleteGymTestCase)
 

@@ -40,7 +40,7 @@ class OverviewPlanTestCase(WorkoutManagerTestCase):
             "protein": 25.63,
             "carbohydrates": 0.0,
             'license': 1,
-            'license_author': 'internet'
+            'license_author': 3
         }
         for i in range(0, 50):
             self.client.post(reverse('nutrition:ingredient:add'), data)

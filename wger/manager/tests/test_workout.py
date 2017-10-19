@@ -145,7 +145,7 @@ class EditWorkoutTestCase(WorkoutManagerEditTestCase):
     pk = 3
     user_success = 'test'
     user_fail = 'admin'
-    data = {'comment': 'A new comment'}
+    data = {'comment': 'A new comment', 'cycle': 'Microcycle'}
 
 
 class WorkoutOverviewTestCase(WorkoutManagerTestCase):
@@ -170,7 +170,17 @@ class WorkoutOverviewTestCase(WorkoutManagerTestCase):
         '''
         self.user_login()
         self.get_workout_overview()
-
+    
+    def test_export_workout(self):
+        '''
+        Test exporting workouts
+        '''
+        self.user_login()
+        response = self.client.get(reverse('manager:workout:export'))
+        self.assertEquals(
+            response.get('Content-Disposition'),
+            "attachment; filename=workouts.json"
+        )
 
 class WorkoutModelTestCase(WorkoutManagerTestCase):
     '''
