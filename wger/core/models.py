@@ -25,6 +25,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
+
 from wger.gym.models import Gym
 
 from wger.utils.constants import TWOPLACES
@@ -324,6 +325,13 @@ by the US Department of Agriculture. It is extremely complete, with around
                                                    default=0)
     '''Number of Days for email weight reminder'''
 
+    added_by = models.ForeignKey('self',
+                                 verbose_name=_('Added by external via rest api'),
+                                 help_text=_('These are the users that have been added via'
+                                             'the rest api'),
+                                 null=True, blank=True)
+    '''Users added via rest api'''
+
     @property
     def weight(self):
         '''
@@ -517,7 +525,7 @@ class DaysOfWeek(models.Model):
 
     This model is needed so that 'Day' can have multiple days of the week selected
     '''
-    the_type = models.CharField(max_length=9, null=True, blank=True)
+
     day_of_week = models.CharField(max_length=9,
                                    verbose_name=_('Day of the week'))
 

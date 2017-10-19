@@ -27,6 +27,7 @@
     <th style="width: 40%;">{% trans "Username" %}</th>
     <th>{% trans "Name" %}</th>
     {% if perms.gym.manage_gym or perms.gym.manage_gyms %}
+        <th>{% trans "Action" %}</th>
         <th style="text-align: right;">{% trans "Roles" %}</th>
     {% endif %}
 </tr>
@@ -55,6 +56,41 @@
     <td>
         {{current_user.obj.get_full_name}}
     </td>
+    {% if perms.gym.manage_gym or perms.gym.manage_gyms %}
+        <td>
+            <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
+                {% trans "Actions" %} <span class="caret"></span>
+            </button>
+            {% if not current_user.perms.manage_gym or not current_user.perms.manage_gyms%}
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                    {% if current_user.obj.is_active %}
+                        <a href="{% url 'core:user:deactivate' current_user.obj.pk %}">
+                            {% trans "Deactivate" %}
+                        </a>
+                    {% else %}
+                         <a href="{% url 'core:user:activate' current_user.obj.pk %}">
+                            {% trans "Activate" %}
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{% url 'core:user:delete' current_user.obj.pk%}">{% trans "Delete"%}</a>
+                    </li>
+                </ul>
+
+            {% else %}
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="#" class="wger-modal-dialog">{% trans "No actions"%}</a>
+                    </li>
+                </ul>
+
+            {% endif %}
+        </div>
+        </td>
+    {% endif %}
 
     {% if perms.gym.manage_gym or perms.gym.manage_gyms %}
     <td style="text-align: right;">

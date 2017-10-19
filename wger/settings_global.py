@@ -88,6 +88,7 @@ INSTALLED_APPS = (
     'djangobower',
     # support for social login
     'social_django',
+    # fitbit application
 )
 
 # added list of external libraries to be installed by bower
@@ -376,6 +377,9 @@ SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('FACEBOOK_SECRET')
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('GOOGLE_OAUTH2_KEY')
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('GOOGLE_OAUTH2_SECRET')
+
+FITAPP_CONSUMER_KEY = os.environ.get('FITAPP_CONSUMER_KEY')
+FITAPP_CONSUMER_SECRET = os.environ.get('FITAPP_CONSUMER_SECRET')
 
 
 #

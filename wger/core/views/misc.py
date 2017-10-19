@@ -15,9 +15,13 @@
 # You should have received a copy of the GNU Affero General Public License
 
 import logging
-
+import base64
+import requests
+import dateutil.parser 
+import fitbit
+from .fitLib import Fitbit
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse, reverse_lazy
@@ -87,9 +91,7 @@ def dashboard(request):
     Show the index page, in our case, the last workout and nutritional plan
     and the current weight
     '''
-
     template_data = {}
-
     # Load the last workout, either from a schedule or a 'regular' one
     (current_workout, schedule) = Schedule.objects.get_current_workout(request.user)
 
@@ -132,11 +134,45 @@ def dashboard(request):
     template_data['weekdays'] = week_day_result
 
     if plan:
-
         # Load the nutritional info
         template_data['nutritional_info'] = plan.get_nutritional_values()
 
     return render(request, 'index.html', template_data)
+
+@login_required
+def fitbitLogin(request):
+    fitConnect = Fitbit()
+    url = fitConnect.GetAuthorizationUri()
+    return redirect(url)
+
+@login_required
+def fitbitComplete(request):
+    code = request.GET.get('code')
+    # print(code)
+    fitConnect = Fitbit()
+    token = fitConnect.GetAccessToken(code)
+
+    headers = {
+            'Authorization': 'Bearer %s' % token['access_token']
+        }
+
+    final_url = 'https://' + fitConnect.API_SERVER + '/1/user/-/body/weight/date/today/30d.json'
+    try:
+        resp = requests.get(final_url, headers=headers)
+        data = resp.json()
+        print(data)
+        for content_data in data['body-weight']:
+            weight = WeightEntry()
+            weight.user = request.user
+            weight.weight=content_data['value']
+            weight.date = dateutil.parser.parse(content_data['dateTime'])
+            try:
+                weight.save()
+            except Exception as e:
+                pass
+    except Exception as e:
+        pass
+    return HttpResponseRedirect(reverse('core:dashboard'))
 
 
 class ContactClassView(TemplateView):
