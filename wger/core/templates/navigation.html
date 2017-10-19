@@ -244,6 +244,17 @@
                             </li>
                         </ul>
                     {% endif %}
+
+                    {#                      #}
+                    {# User Comparison tab  #}
+                    {#                      #}
+                    {% if user.is_authenticated %}
+                    <li {% if active_tab == 'user_comparisons' %}class="active"{% endif %}>
+                        <a href="{% url 'core:comparisons' %}">
+                            {% trans "Comparisons" %}
+                        </a>
+                    </li>
+                    {% endif %}
                 </div><!--/.nav-collapse -->
             </div>
         </div>
