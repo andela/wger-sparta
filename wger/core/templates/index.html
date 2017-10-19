@@ -36,11 +36,8 @@ day in your current workout:{% endblocktrans %} <strong>{{current_workout}}</str
     </div>
 </div>
 {% endif %}
-{% if fitbit %}
-    <a class="btn btn-default" href="{% url 'fitbit-login' %}">Import Data from FitBit</a>
-{% else %}
-    <a class="btn btn-default" href="{% url 'fitbit-login' %}"> Connect with FitBit </a>
-{% endif %}
+
+<a class="btn btn-default" href="{% url 'core:fitbit-login' %}">Import Data from FitBit</a>
 <div class="row">
     <div class="col-sm-4">
         <h4>{% trans "Workout"%}</h4>

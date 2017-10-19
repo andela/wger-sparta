@@ -150,8 +150,6 @@ urlpatterns = i18n_patterns(
         {'sitemaps': sitemaps},
         name='sitemap'),
     url(r'^social', include('social_django.urls', namespace="social")),
-    url(r'^fitbit/', include('fitapp.urls')),
-
 )
 #
 # URLs without language prefix
