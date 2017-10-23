@@ -4,7 +4,7 @@
 {% load wger_extras %}
 
 
-{% block title %}{% trans "Add meal item" %}{% endblock %}
+{% block title %}{% trans "Edit meal item" %}{% endblock %}
 
 
 {% block header %}
@@ -43,7 +43,6 @@ $(document).ready(function() {
     </div>
     {% render_form_field form.amount %}
     {% render_form_field form.weight_unit %}
-    {% render_form_field form.type %}
     {% render_form_field form.time %}
     {% render_form_submit submit_text %}
 </form>
