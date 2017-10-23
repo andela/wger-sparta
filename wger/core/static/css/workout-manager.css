@@ -124,7 +124,7 @@ a:hover img
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);	
+    -o-filter: grayscale(0%);
 }
 */
 
@@ -172,7 +172,7 @@ header h1{
 }
 
 header a,
-header a:hover, 
+header a:hover,
 header a:focus{
     color:white;
     font-size:90%;
@@ -291,4 +291,8 @@ div.info a, div.info a:hover, div.info a:active{
  **************************************************************/
 #shoutout h2:first-child {
     margin-top: 0;
+}
+
+.eaten{
+    color: #FF0000;
 }
