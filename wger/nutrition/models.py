@@ -690,3 +690,10 @@ class MealItem(models.Model):
             nutritional_info[i] = Decimal(nutritional_info[i]).quantize(TWOPLACES)
 
         return nutritional_info
+      
+    def get_type(self):
+        '''
+        Return the meal type. Either PLANNED or EATEN
+        :return:
+        '''
+        return self.type 
