@@ -170,7 +170,7 @@ class WorkoutOverviewTestCase(WorkoutManagerTestCase):
         '''
         self.user_login()
         self.get_workout_overview()
-    
+
     def test_export_workout(self):
         '''
         Test exporting workouts

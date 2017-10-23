@@ -105,7 +105,7 @@ class DayCreateView(DayView, CreateView):
     '''
     Generic view to add a new exercise day
     '''
-    
+
     owner_object = {'pk': 'workout_pk', 'class': Workout}
 
     def form_valid(self, form):

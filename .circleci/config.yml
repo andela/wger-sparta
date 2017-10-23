@@ -16,6 +16,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}
           - v1-dependencies-
+
       - run:
           name: install dependencies
           command: |
@@ -29,6 +30,7 @@ jobs:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
+
       - run:
           name: run tests
           command: |

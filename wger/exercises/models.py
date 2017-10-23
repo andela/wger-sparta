@@ -303,7 +303,7 @@ class Exercise(AbstractSubmissionModel, AbstractLicenseModel, models.Model):
         submitted exercises only)
         '''
         try:
-            user = User.objects.get(username=self.license_author.name)
+            user = User.objects.get(username=self.license_author)
         except User.DoesNotExist:
             return
         if self.license_author.name and user.email:
@@ -491,7 +491,7 @@ class ExerciseImage(AbstractSubmissionModel, AbstractLicenseModel, models.Model)
                              six.text_type(message),
                              fail_silently=True)
 
-        
+
 @python_2_unicode_compatible
 class ExerciseComment(models.Model):
     '''
