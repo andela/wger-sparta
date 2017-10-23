@@ -696,4 +696,4 @@ class MealItem(models.Model):
         Return the meal type. Either PLANNED or EATEN
         :return:
         '''
-        return self.type
+        return self.type 
