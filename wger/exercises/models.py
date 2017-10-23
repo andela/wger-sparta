@@ -21,7 +21,6 @@ import logging
 import bleach
 
 from django.db import models
-from django.db.models import Q
 from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify  # django.utils.text.slugify in django 1.5!
 from django.contrib.auth.models import User
@@ -89,7 +88,7 @@ class Muscle(models.Model):
             delete_template_fragment_cache('exercise-overview-mobile', language.id)
             delete_template_fragment_cache('equipment-overview', language.id)
 
-        exercises = Exercise.objects.filter(Q(muscles=self) | Q(muscles_secondary=self)).iterator()
+        exercises = Exercise.objects.filter(muscles=self, muscles_secondary=self)
         for exercise in exercises:
             cache.delete(cache_mapper.get_exercise_muscle_bg_key(exercise))
             for set in exercises.set_set.all():
