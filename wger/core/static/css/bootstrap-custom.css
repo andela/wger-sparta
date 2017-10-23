@@ -248,7 +248,7 @@ fieldset[disabled] .btn-default.active {
     justify-content: center;
     align-items: center;
 }
-.fa {
+.social .fa {
     font-size: 40px;
     width: 60px;
     height:60px;
@@ -278,6 +278,7 @@ fieldset[disabled] .btn-default.active {
     background: #dd4b39;
     color: white;
   }
+
 /*
 body.modal {
     overflow-y: hidden;
