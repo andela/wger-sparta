@@ -10,5 +10,7 @@
   <div id="current-username" data-current-username="{{ owner_user.username }}" value="{{ owner_user.username }}"></div>
   <div class="row">
     {% trans "There is currently no data to display." %}
+    <div id="chart"></div>
   </div>
+  <script src="{% static 'js/user_comparisons.js' %}"></script>
 {% endblock %}
